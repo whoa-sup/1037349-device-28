@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
-  <body>
-    <header class="page-header">
+  <body class="page">
+    <header class="page__header page-header">
       <a class="page-header__logo" href="index.html">
         <img src="#" alt="Device">
       </a>
@@ -40,15 +40,15 @@
         <li class="nav-list__item"><a href="#">Контакты</a></li>
       </ul>
     </header>
-    <main class="catalog-main">
+    <main class="page__main catalog-main">
       <h1 class="visually-hidden">Каталог товаров магазина DEVICE</h1>
       <h2 class="catalog-main__title">Моноподы для селфи</h2>
       <!-- Breadcrumbs -->
-      <div class="catalog-main__breadcrumbs breadcrumbs">
-        <a class="breadcrumb__link" href="index.html">Главная</a>
-        <a class="breadcrumb__link" href="catalog.html">Каталог товаров</a>
-        <a class="breadcrumb__link" href="catalog.html/selfie-monopods">Моноподы для селфи</a>
-      </div>
+      <ul class="catalog-main__breadcrumbs breadcrumbs">
+        <li class="breadcrumb__item"><a href="index.html">Главная</a></li>
+        <li class="breadcrumb__item"><a href="catalog.html">Каталог товаров</a></li>
+        <li class="breadcrumb__item">Моноподы для селфи</li>
+      </ul>
       <!-- Sorting -->
       <section class="catalog-main__sorting sorting">
         <h2 class="visually-hidden">Сортировка найденных товаров</h2>
@@ -72,12 +72,54 @@
         </ul>
       </section>
       <!-- Фильтр -->
-      <section class="catalog-main__filter filter">
+      <aside class="catalog-main__filter filter">
         <h2 class="filter__title">Фильтр:</h2>
         <form action="https://echo.htmlacademy.ru/" class="filter__form" method="POST">
-
+          <fieldset class="filter__price">
+            <legend class="filter__legend">Стоимость</legend>
+            <!-- Тут будет слайдер -->
+          </fieldset>
+          <fieldset class="filter__price">
+            <legend class="filter__legend">Цвет</legend>
+            <ul class="filter__list">
+              <li class="filter__item">
+                <input class="filter__checkbox" type="checkbox" name="black" id="black" checked>
+                <label class="filter__label" for="black">Чёрный</label>
+              </li>
+              <li class="filter__item">
+                <input class="filter__checkbox" type="checkbox" name="white" id="white">
+                <label class="filter__label" for="white">Белый</label>
+              </li>
+              <li class="filter__item">
+                <input class="filter__checkbox" type="checkbox" name="blue" id="blue" checked>
+                <label class="filter__label" for="blue">Синий</label>
+              </li>
+              <li class="filter__item">
+                <input class="filter__checkbox" type="checkbox" name="red" id="red" checked>
+                <label class="filter__label" for="red">Красный</label>
+              </li>
+              <li class="filter__item">
+                <input class="filter__checkbox" type="checkbox" name="pink" id="pink">
+                <label class="filter__label" for="pink">Розовый</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="filter__price">
+            <legend class="filter__legend">Bluetooth</legend>
+            <ul class="filter__list">
+              <li class="filter__item">
+                <input class="filter__radio" type="radio" name="bluetooth" id="with-bluetooth" checked>
+                <label class="filter__label" for="with-bluetooth">Есть</label>
+              </li>
+              <li class="filter__item">
+                <input class="filter__radio" type="radio" name="bluetooth" id="without-bluetooth" checked>
+                <label class="filter__label" for="without-bluetooth">Нет</label>
+              </li>
+            </ul>
+          </fieldset>
+          <button class="button" type="submit">Показать</button>
         </form>
-      </section>
+      </aside>
       <!-- Список товаров -->
       <section class="catalog-main__goods goods">
         <h2 class="visually-hidden">Список найденных товаров</h2>
@@ -121,8 +163,10 @@
         <a class="paginator__link" href="#next">Вперед</a>
       </section>
     </main>
-    <footer class="page-footer">
-      <img src="#" alt="Device" class="page-footer__logo">
+    <footer class="page__footer page-footer">
+      <a class="page-header__logo" href="index.html">
+        <img src="#" alt="Device">
+      </a>
       <address class="page-footer__address">г. Москва, ул. Строителей, 15
       </address>
       <ul class="page-footer__menu">
@@ -140,7 +184,7 @@
         <li><a class="socials__link" href="#"><span class="visually-hidden">Ссылка на нас в Instagram</span></a></li>
         <li><a class="socials__link" href="#"><span class="visually-hidden">Ссылка на нас в Twitter</span></a></li>
       </ul>
-      <p class="page-footer__phone">Тел.: +7 (495) 495-95-95</p>
+      <a href="tel:+74954959595">Тел.: +7 (495) 495-95-95</a>
       <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="#" alt="" class="page-footer__htmla-logo"></a>
     </footer>
   </body>
