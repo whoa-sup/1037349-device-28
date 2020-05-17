@@ -1,4 +1,1 @@
-<svg width="62" height="62" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M22.4 26.6H24.32V35H22.88L19.64 30.44V35H17.72V26.6H19.16L22.4 31.16V26.6ZM27.6791 33.152H31.0391V35H25.7591V26.6H30.9791V28.448H27.6791V29.84H30.6791V31.664H27.6791V33.152ZM33.8383 35L31.5223 26.6H33.5383L34.9903 32.48L36.6103 26.6H38.1703L39.7903 32.48L41.2423 26.6H43.2583L40.9423 35H38.7583L37.3903 30.044L36.0223 35H33.8383Z" fill="black" fill-opacity="0.3"/>
-<circle cx="31" cy="31" r="30" stroke="black" stroke-opacity="0.3" stroke-width="2"/>
-</svg>
+<svg width="62" height="62" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22.4 26.6h1.92V35h-1.44l-3.24-4.56V35h-1.92v-8.4h1.44l3.24 4.56V26.6zm5.28 6.552h3.36V35h-5.28v-8.4h5.22v1.848h-3.3v1.392h3v1.824h-3v1.488zM33.837 35l-2.316-8.4h2.016l1.452 5.88 1.62-5.88h1.56l1.62 5.88 1.452-5.88h2.016L40.942 35h-2.184l-1.368-4.956L36.022 35h-2.184z" fill="#000" fill-opacity=".3"/><circle cx="31" cy="31" r="30" stroke="#000" stroke-opacity=".3" stroke-width="2"/></svg>
