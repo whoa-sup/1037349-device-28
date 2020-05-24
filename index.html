@@ -15,26 +15,30 @@
       </a>
       <div class="page-header__container">
         <form action="#" class="page-header__search-form search-form" method="POST">
-          <label for="search-field" class="search-form__label"></label>
-          <input type="text" class="search-form__input" id="search-field">
-          <button type="submit" class="search-form__button">Найти</button>
+          <label for="search-field" class="visually-hidden">Поиск</label>
+          <input type="text" class="search-form__input" id="search-field" placeholder="Поиск по сайту">
+          <button type="submit" class="search-form__button"><span class="search-form__search-text">Найти</span></button>
         </form>
-        <a href="#" class="page-header__link">Войти</a>
-        <ul>
-          <li><a class="page-header__link" href="">Сравнить</a></li>
-          <li><a class="page-header__link" href="">Корзина</a></li>
-        </ul>
+        <div class="page-header__user">
+          <a class="page-header__link page-header__link--user" href="#">Войти</a>
+        </div>
+        <div class="page-header__services">
+          <a class="page-header__link page-header__link--chart" href="#">Сравнить</a>
+          <a class="page-header__link page-header__link--cart" href="#">Корзина</a>
+        </div>
       </div>
       <ul class="page-header__nav nav-list">
-        <li class="nav-list__item nav-list__item--open"><a href="catalog.html">Каталог</a>
-          <ul class="nav-list__sub-list">
-            <li class="nav-list__sub-item"><a href="catalog.html/virtual-reality">Виртуальная реальность</a></li>
-            <li class="nav-list__sub-item"><a href="catalog.html/selfie-monopods">Моноподы для селфи</a></li>
-            <li class="nav-list__sub-item"><a href="catalog.html/action-cameras">Экшн-камеры</a></li>
-            <li class="nav-list__sub-item"><a href="catalog.html/fitness-bracelets">Фитнес браслеты</a></li>
-            <li class="nav-list__sub-item"><a href="catalog.html/smart-watch">Умные часы</a></li>
-            <li class="nav-list__sub-item"><a href="catalog.html/quadcopter">Квадрокоптер</a></li>
-          </ul>
+        <li class="nav-list__item nav-list__item--open"><a href="catalog.html">Каталог товаров</a>
+          <div class="nav-list__wrapper">
+            <ul class="nav-list__sub-list">
+              <li class="nav-list__sub-item"><a href="catalog.html/virtual-reality">Виртуальная реальность</a></li>
+              <li class="nav-list__sub-item"><a href="catalog.html/selfie-monopods">Моноподы для селфи</a></li>
+              <li class="nav-list__sub-item"><a href="catalog.html/action-cameras">Экшн-камеры</a></li>
+              <li class="nav-list__sub-item"><a href="catalog.html/fitness-bracelets">Фитнес браслеты</a></li>
+              <li class="nav-list__sub-item"><a href="catalog.html/smart-watch">Умные часы</a></li>
+              <li class="nav-list__sub-item"><a href="catalog.html/quadcopter">Квадрокоптер</a></li>
+            </ul>
+          </div>
         </li>
         <li class="nav-list__item"><a href="#">Доставка</a></li>
         <li class="nav-list__item"><a href="#">Гарантия</a></li>
