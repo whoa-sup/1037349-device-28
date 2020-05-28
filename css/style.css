@@ -18,7 +18,8 @@
   font-family: "Open Sans";
 
   src: local("Open Sans"),
-  url("../fonts/OpenSans-Light.ttf") format("truetype");
+  url("../fonts/opensanslight.woff2") format("woff2"),
+  url("../fonts/opensanslight.woff") format("woff");
 }
 
 @font-face {
@@ -27,7 +28,8 @@
   font-family: "Gilroy";
 
   src: local("Gilroy"),
-  url("../fonts/Gilroy-ExtraBold.otf") format("opentype");
+  url("../fonts/gilroyextrabold.woff2") format("woff2"),
+  url("../fonts/gilroyextrabold.woff") format("woff");
 }
 
 *,
