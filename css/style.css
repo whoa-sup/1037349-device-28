@@ -93,6 +93,10 @@ a {
   background-color: var(--special-yellow-dark);
 }
 
+.button:active span{
+  opacity: 0.3;
+}
+
 /* Page */
 .page {
   min-width: 1200px;
@@ -154,13 +158,12 @@ a {
 /* Search-Form */
 .search-form {
   position: relative;
-
   display: flex;
   width: 440px;
   min-height: 50px;
 }
 
-.search-form::before {
+.search-form__label::before {
   content: "";
   position: absolute;
   top: 18px;
@@ -178,7 +181,6 @@ a {
   min-width: 355px;
   margin: 0;
   padding: 15px;
-  padding-bottom: 15px;
   padding-left: 40px;
 
   background-color: var(--special-yellow);
@@ -219,6 +221,7 @@ a {
   outline: none;
   box-shadow: inset 0 -2px 0 var(--basic-black);
 }
+
 /* Login block */
 .page-header__user {
   display: flex;
@@ -723,7 +726,7 @@ a {
   width: 1160px;
   margin: 0 auto;
   display: flex;
-  margin-bottom: 86px;
+  margin-bottom: 76px;
 }
 
 /* О компании */
@@ -779,7 +782,7 @@ a {
 .info__list {
   margin: 0;
   padding: 0;
-  margin-bottom: 69px;
+  margin-bottom: 68px;
   font-family: var(--bold-font);
   font-style: normal;
   font-weight: 800;
@@ -862,7 +865,7 @@ a {
   display: block;
   margin: 0;
   padding: 0;
-  margin-bottom: 72px;
+  margin-bottom: 71px;
 }
 
 

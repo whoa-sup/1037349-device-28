@@ -9,13 +9,13 @@
   </head>
   <body class="page">
     <header class="page__header page-header">
-      <a class="page-header__logo" href="">
+      <a class="page-header__logo" href="/">
         <svg width="163" height="35" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0)"><path fill-rule="evenodd" clip-rule="evenodd" d="M-.151.702v33.6h13.532a15.721 15.721 0 0011.72-4.824 16.458 16.458 0 004.712-11.976 16.457 16.457 0 00-4.712-11.976A15.724 15.724 0 0013.381.702H-.151zM7.582 26.91V8.091h5.8a8.646 8.646 0 016.5 2.568 9.408 9.408 0 012.489 6.84 9.406 9.406 0 01-2.489 6.84 8.642 8.642 0 01-6.5 2.568h-5.8v.003zm34.8-5.952h12.082v-7.3H42.378V8.091h13.291V.702H34.645v33.6H55.91V26.91H42.378v-5.952h.004zm36.343 13.344L89.744.702h-8.458l-7.491 24.72L66.304.702h-8.457l11.019 33.6h9.859zm14.4 0h7.733V.702h-7.733v33.6zm38.615-1.416a15.51 15.51 0 006.041-5.688l-6.67-3.84a7.482 7.482 0 01-3.165 3.024 9.873 9.873 0 01-4.664 1.1 9.596 9.596 0 01-7.177-2.736 9.911 9.911 0 01-2.682-7.248 9.91 9.91 0 012.682-7.248 9.592 9.592 0 017.177-2.736 9.897 9.897 0 014.639 1.08 7.589 7.589 0 013.19 3.048l6.67-3.84a15.874 15.874 0 00-6.09-5.688 17.42 17.42 0 00-8.409-2.088c-9.779-.272-17.797 7.691-17.591 17.472-.208 9.781 7.809 17.747 17.588 17.476 2.95.027 5.859-.69 8.458-2.088h.003zm17.881-11.928h12.082v-7.3h-12.085V8.091h13.29V.702h-21.023v33.6h21.265V26.91h-13.532v-5.952h.003z" fill="#000000"/></g><defs><clippath id="clip0"><path fill="#fff" d="M0 0h163v35H0z"/></clippath></defs></svg>
         <span class="visually-hidden">Магазин электронных аксессуаров Device</span>
       </a>
       <div class="page-header__container">
         <form action="#" class="page-header__search-form search-form" method="POST">
-          <label for="search-field" class="visually-hidden">Поиск</label>
+          <label for="search-field" class="search-form__label"><span class="visually-hidden">Поиск</span></label>
           <input type="text" class="search-form__input" id="search-field" placeholder="Поиск по сайту">
           <button type="submit" class="search-form__button"><span class="search-form__search-text">Найти</span></button>
         </form>
@@ -27,23 +27,25 @@
           <a class="page-header__link page-header__link--cart" href="#">Корзина</a>
         </div>
       </div>
-      <ul class="page-header__nav nav-list">
-        <li class="nav-list__item nav-list__item--open"><a href="catalog.html">Каталог товаров</a>
-          <div class="nav-list__wrapper">
-            <ul class="nav-list__sub-list">
-              <li class="nav-list__sub-item"><a href="catalog.html/virtual-reality">Виртуальная реальность</a></li>
-              <li class="nav-list__sub-item"><a href="catalog.html/selfie-monopods">Моноподы для селфи</a></li>
-              <li class="nav-list__sub-item"><a href="catalog.html/action-cameras">Экшн-камеры</a></li>
-              <li class="nav-list__sub-item"><a href="catalog.html/fitness-bracelets">Фитнес браслеты</a></li>
-              <li class="nav-list__sub-item"><a href="catalog.html/smart-watch">Умные часы</a></li>
-              <li class="nav-list__sub-item"><a href="catalog.html/quadcopter">Квадрокоптер</a></li>
-            </ul>
-          </div>
-        </li>
-        <li class="nav-list__item"><a href="#">Доставка</a></li>
-        <li class="nav-list__item"><a href="#">Гарантия</a></li>
-        <li class="nav-list__item"><a href="#">Контакты</a></li>
-      </ul>
+      <nav>
+        <ul class="page-header__nav nav-list">
+          <li class="nav-list__item nav-list__item--open"><a href="catalog.html">Каталог товаров</a>
+            <div class="nav-list__wrapper">
+              <ul class="nav-list__sub-list">
+                <li class="nav-list__sub-item"><a href="catalog.html/virtual-reality">Виртуальная реальность</a></li>
+                <li class="nav-list__sub-item"><a href="catalog.html/selfie-monopods">Моноподы для селфи</a></li>
+                <li class="nav-list__sub-item"><a href="catalog.html/action-cameras">Экшн-камеры</a></li>
+                <li class="nav-list__sub-item"><a href="catalog.html/fitness-bracelets">Фитнес браслеты</a></li>
+                <li class="nav-list__sub-item"><a href="catalog.html/smart-watch">Умные часы</a></li>
+                <li class="nav-list__sub-item"><a href="catalog.html/quadcopter">Квадрокоптер</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-list__item"><a href="#">Доставка</a></li>
+          <li class="nav-list__item"><a href="#">Гарантия</a></li>
+          <li class="nav-list__item"><a href="#">Контакты</a></li>
+        </ul>
+      </nav>
     </header>
     <main class="page__main page-main">
       <h1 class="visually-hidden">Добро пожаловать на главную страницу магазина Device</h1>
@@ -290,7 +292,7 @@
             <li class="info__item"><span>Автотрейдинг</span></li>
             <li class="info__item"><span>ЖелДорЭкспедиция</span></li>
           </ul>
-          <a class="button info__button" href="#">Подробнее о нас</a>
+          <a class="button info__button" href="#"><span>Подробнее о нас</span></a>
         </section>
         <!-- Блок контактов -->
         <section class="page-main__contacts contacts">
@@ -302,7 +304,7 @@
               <img width="560" height="222" src="img/map.png" srcset="img/map@2x.png 2x, img/map@3x.png 3x" alt="улица Строителей 15">
             </picture>
           </a>
-          <a class="button contacts__button" href="#">Напишите нам</a>
+          <a class="button contacts__button" href="#"><span>Напишите нам</span></a>
         </section>
       </div>
 
@@ -310,7 +312,7 @@
     <!-- Footer -->
     <footer class="page__footer page-footer">
       <div class="page-footer__container">
-        <a class="page-footer__logo" href="index.html">
+        <a class="page-footer__logo" href="/">
           <svg width="163" height="35" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0)"><path fill-rule="evenodd" clip-rule="evenodd" d="M-.151.702v33.6h13.532a15.721 15.721 0 0011.72-4.824 16.458 16.458 0 004.712-11.976 16.457 16.457 0 00-4.712-11.976A15.724 15.724 0 0013.381.702H-.151zM7.582 26.91V8.091h5.8a8.646 8.646 0 016.5 2.568 9.408 9.408 0 012.489 6.84 9.406 9.406 0 01-2.489 6.84 8.642 8.642 0 01-6.5 2.568h-5.8v.003zm34.8-5.952h12.082v-7.3H42.378V8.091h13.291V.702H34.645v33.6H55.91V26.91H42.378v-5.952h.004zm36.343 13.344L89.744.702h-8.458l-7.491 24.72L66.304.702h-8.457l11.019 33.6h9.859zm14.4 0h7.733V.702h-7.733v33.6zm38.615-1.416a15.51 15.51 0 006.041-5.688l-6.67-3.84a7.482 7.482 0 01-3.165 3.024 9.873 9.873 0 01-4.664 1.1 9.596 9.596 0 01-7.177-2.736 9.911 9.911 0 01-2.682-7.248 9.91 9.91 0 012.682-7.248 9.592 9.592 0 017.177-2.736 9.897 9.897 0 014.639 1.08 7.589 7.589 0 013.19 3.048l6.67-3.84a15.874 15.874 0 00-6.09-5.688 17.42 17.42 0 00-8.409-2.088c-9.779-.272-17.797 7.691-17.591 17.472-.208 9.781 7.809 17.747 17.588 17.476 2.95.027 5.859-.69 8.458-2.088h.003zm17.881-11.928h12.082v-7.3h-12.085V8.091h13.29V.702h-21.023v33.6h21.265V26.91h-13.532v-5.952h.003z" fill="#F0C52E"/></g><defs><clippath id="clip1"><path fill="#fff" d="M0 0h163v35H0z"/></clippath></defs></svg>
           <span class="visually-hidden">Магазин электронных аксессуаров Device</span>
         </a>
