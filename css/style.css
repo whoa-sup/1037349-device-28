@@ -391,6 +391,13 @@ a {
   grid-row: 3/4;
 }
 
+.nav-list__sub-item:hover > a {
+  opacity: 0.6;
+}
+
+.nav-list__sub-item:active > a {
+  opacity: 0.3;
+}
 /* Прячем меню */
 
 .nav-list__wrapper {
