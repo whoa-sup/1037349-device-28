@@ -939,7 +939,7 @@ a {
   max-width: 160px;
 }
 
-.popular__title---fitness {
+.popular__title--fitness {
   letter-spacing: normal;
 }
 /* Слайдер сервисов */
@@ -1004,36 +1004,22 @@ a {
   position: relative;
 }
 
+.services__button--current,
 .services__button:active {
   color: var(--special-yellow);
   background-image: none;
   background-color: var(--basic-black);
 }
 
+.services__button--current::before,
 .services__button:active::before {
   content: "";
   width: 120px;
-  height: 41px;
+  height: 100%;
   background-color: var(--basic-black);
   position: absolute;
   left: 100%;
-  top: 0;
-}
-
-.services__button--current {
-  color: var(--special-yellow);
-  background-image: none;
-  background-color: var(--basic-black);
-}
-
-.services__button--current::before {
-  content: "";
-  width: 120px;
-  height: 41px;
-  background-color: var(--basic-black);
-  position: absolute;
-  left: 100%;
-  top: 0;
+  top: 0px;
 }
 
 .services__button--current:hover {
