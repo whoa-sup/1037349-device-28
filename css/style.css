@@ -10,9 +10,12 @@
   --special-yellow: #f7e296;
   --special-green:#91c92f;
   --special-grey: #DCDCDC;
+  --special-grey-input: #f2f2f2;
+  --special-dark-grey: #EAEAEA;
   --special-grey-toggle: #C4C4C4;
   --paginator-grey: #EBEBEB;
   --paginator-dark-grey: #D9D9D9;
+  --special-invalid: #F6DADA;
 
   --basic-font: "Open Sans", "Arial", sans-serif;
   --bold-font: "Gilroy", "Tahoma", sans-serif;
@@ -27,6 +30,16 @@
   src: local("Open Sans"),
   url("../fonts/opensanslight.woff2") format("woff2"),
   url("../fonts/opensanslight.woff") format("woff");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 400;
+  font-family: "Open Sans";
+
+  src: local("Open Sans"),
+  url("../fonts/opensans.woff2") format("woff2"),
+  url("../fonts/opensans.woff") format("woff");
 }
 
 @font-face {
@@ -2045,3 +2058,154 @@ a {
   opacity: 1;
 }
 
+/* Modal */
+
+.page__modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+
+  display: none;
+  margin: auto;
+
+  background-color: var(--basic-white);
+  box-shadow: 0 10px 16px rgba(0, 0, 0, 0.15);
+  transform: translateX(-50%) translateY(-50%);
+}
+
+
+.modal__button {
+  position: absolute;
+  top: 23px;
+  right: 19px;
+
+  width: 55px;
+  height: 55px;
+
+  background-color: var(--special-yellow-dark);
+  background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M17.95 19.725L10 11.762l-7.95 7.963L.275 17.95 8.237 10 .275 2.05 2.05.275 10 8.237l7.95-7.95 1.762 1.763-7.95 7.95 7.95 7.95-1.762 1.775z' fill='%23fff'/%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  border: none;
+  border-radius: 50%;
+  opacity: 0.5;
+}
+
+.modal__button:focus,
+.modal__button:hover {
+  opacity: 1;
+}
+
+.modal__button:focus {
+  outline: none;
+  box-shadow: 0 0 2px 2px var(--basic-black);
+}
+
+.modal__button:active {
+  opacity: 0.3;
+}
+
+/* Map */
+
+.modal-map {
+  width: 960px;
+}
+
+.modal-map__iframe {
+  display: block;
+
+  border: none;
+}
+
+/* Write us */
+.writeus {
+  width: 960px;
+  padding-top: 92px;
+  padding-right: 100px;
+  padding-bottom: 60px;
+  padding-left: 100px;
+}
+
+.writeus__form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.writeus__container {
+  display: grid;
+  width: 360px;
+  margin: 0;
+  margin-bottom: 32px;
+  padding: 0;
+
+  grid-row-gap: 10px;
+}
+
+.writeus__container--full {
+  width: 100%;
+  margin-bottom: 45px;
+}
+
+.writeus__label {
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 22px;
+  font-family: var(--bold-font);
+  color: var(--basic-black);
+}
+
+.writeus__input {
+  padding-top: 17px;
+  padding-right: 20px;
+  padding-bottom: 15px;
+  padding-left: 20px;
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  font-family: var(--basic-font);
+  color: var(--basic-dark);
+
+  background-color: var(--special-grey-input);
+  border: none;
+
+  resize: none;
+}
+
+.writeus__input--textarea {
+  height: 167px;
+}
+
+.writeus__input::placeholder {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.writeus__input:focus {
+  background-color: var(--basic-white);
+  outline: 2px solid var(--special-yellow);
+}
+
+.writeus__input:hover {
+  background-color: var(--special-dark-grey);
+}
+
+.writeus__input:invalid {
+  background-color: var(--special-invalid);
+  outline: none;
+}
+
+.writeus__button {
+  width: 200px;
+
+  background-color: inherit;
+  border: none;
+}
+
+/* For JS */
+
+.modal--show {
+  display: block;
+}
