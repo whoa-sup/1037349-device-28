@@ -1859,6 +1859,7 @@ a {
 /* Goods */
 
 .goods {
+  margin-bottom: 41px;
   padding-top: 70px;
   padding-left: 72px;
 }
@@ -1872,9 +1873,125 @@ a {
 
   grid-column-gap: 40px;
   grid-row-gap: 48px;
-  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  grid-template-columns: repeat(2, 361px);
 }
 
+.goods__item {
+  position: relative;
+
+  width: 361px;
+}
+
+.goods__item:hover .goods__picture {
+  opacity: 0.7;
+}
+
+.goods__picture {
+  display: block;
+  margin-bottom: 30px;
+
+  line-height: 0;
+}
+
+.goods__item--new::before {
+  content: "NEW";
+  position: absolute;
+  top: 29px;
+  right: 26px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 62px;
+  height: 62px;
+
+  font-style: normal;
+  font-weight: 800;
+  font-size: 12px;
+  line-height: 15px;
+  font-family: var(--bold-font);
+  color: rgba(0, 0, 0, 0.3);
+  text-transform: uppercase;
+
+  border: 2px solid rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+}
+
+
+.goods__actions {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+
+  display: none;
+  flex-direction: column;
+
+  transform: translateX(-50%) translateY(-15%);
+}
+
+.goods__item:hover .goods__actions,
+.goods__item:focus-within .goods__actions {
+  display: flex;
+}
+
+.goods__button {
+  width: 200px;
+  margin-bottom: 10px;
+
+  background-color: transparent;
+  border: none;
+}
+
+.goods__compare {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 18px;
+  font-family: var(--basic-font);
+  color: var(--basic-black);
+  letter-spacing: 0.1em;
+
+  background-color: transparent;
+  border: none;
+  opacity: 0.5;
+}
+
+.goods__compare:hover {
+  opacity: 1;
+}
+
+.goods__compare:active {
+  opacity: 0.2;
+}
+
+.goods__details {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  width: 100%;
+}
+
+.goods__link {
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 22px;
+  font-family: var(--bold-font);
+  color: var(--basic-black);
+  letter-spacing: 0.05em;
+}
+
+.goods__price {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 18px;
+  font-family: var(--bold-font);
+  text-align: right;
+  color: var(--basic-black);
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+}
 
 /* Paginator */
 
