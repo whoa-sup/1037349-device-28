@@ -843,18 +843,18 @@ a {
   cursor: pointer;
 }
 
-#slide-1:focus-within ~ .slider__controls .slider__button--1,
-#slide-2:focus-within ~ .slider__controls .slider__button--2,
-#slide-3:focus-within ~ .slider__controls .slider__button--3,
-#slide-1:hover ~ .slider__controls .slider__button--1,
-#slide-2:hover ~ .slider__controls .slider__button--2,
-#slide-3:hover ~ .slider__controls .slider__button--3 {
+.slider__input--1:focus-within ~ .slider__controls .slider__button--1,
+.slider__input--2:focus-within ~ .slider__controls .slider__button--2,
+.slider__input--3:focus-within ~ .slider__controls .slider__button--3,
+.slider__input--1:hover ~ .slider__controls .slider__button--1,
+.slider__input--2:hover ~ .slider__controls .slider__button--2,
+.slider__input--3:hover ~ .slider__controls .slider__button--3 {
   box-shadow: 0 0 2px 2px var(--basic-black);
 }
 
-#slide-1:checked ~ .slider__controls .slider__button--1::before,
-#slide-2:checked ~ .slider__controls .slider__button--2::before,
-#slide-3:checked ~ .slider__controls .slider__button--3::before {
+.slider__input--1:checked ~ .slider__controls .slider__button--1::before,
+.slider__input--2:checked ~ .slider__controls .slider__button--2::before,
+.slider__input--3:checked ~ .slider__controls .slider__button--3::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -868,15 +868,15 @@ a {
   transform: translateX(-50%) translateY(-50%);
 }
 
-#slide-1:checked ~ .slider__list .slider__container:nth-child(1) {
+.slider__input--1:checked ~ .slider__list .slider__container:nth-child(1) {
   display: block;
 }
 
-#slide-2:checked ~ .slider__list .slider__container:nth-child(2) {
+.slider__input--2:checked ~ .slider__list .slider__container:nth-child(2) {
   display: block;
 }
 
-#slide-3:checked ~ .slider__list .slider__container:nth-child(3) {
+.slider__input--3:checked ~ .slider__list .slider__container:nth-child(3) {
   display: block;
 }
 
