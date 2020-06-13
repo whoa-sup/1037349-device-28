@@ -53,17 +53,14 @@
       <section class="page-main__slider slider">
         <h2 class="visually-hidden">Промо слайды</h2>
         <!-- Переключатель -->
-        <input class="slider__input--1 visually-hidden" type="radio" name="slider" id="slide-1" checked>
-        <input class="slider__input--2 visually-hidden" type="radio" name="slider" id="slide-2">
-        <input class="slider__input--3 visually-hidden" type="radio" name="slider" id="slide-3">
         <div class="slider__controls">
-          <label class="slider__button slider__button--1" for="slide-1"><span class="visually-hidden">Первый слайд</span></label>
-          <label class="slider__button slider__button--2" for="slide-2"><span class="visually-hidden">Второй слайд</span></label>
-          <label class="slider__button slider__button--3" for="slide-3"><span class="visually-hidden">Третий слайд</span></label>
+          <a class="slider__button slider__button--checked" href="#slide-1"><span class="visually-hidden">Первый слайд</span></a>
+          <a class="slider__button" href="#slide-2"><span class="visually-hidden">Второй слайд</span></a>
+          <a class="slider__button" href="#slide-3"><span class="visually-hidden">Третий слайд</span></a>
         </div>
         <!-- Слайды -->
         <ul class="slider__list">
-          <li class="slider__container">
+          <li class="slider__container slider__container--current" id="slide-1">
             <div class="slider__inner">
               <picture>
                 <img  class="slider__image slider__image--1" width="384" height="486" src="img/slider-1.png" srcset="img/slider-1@2x.png 2x, img/slider-1@3x.png 3x" alt="Селфи палка">
@@ -85,7 +82,7 @@
               </div>
             </div>
           </li>
-          <li class="slider__container">
+          <li class="slider__container" id="slide-2">
             <div class="slider__inner">
               <picture>
                 <img  class="slider__image slider__image--2" width="345" height="485" src="img/slider-2.png" srcset="img/slider-2@2x.png 2x, img/slider-2@3x.png 3x" alt="Фитнес-браслет">
@@ -103,7 +100,7 @@
               </div>
             </div>
           </li>
-          <li class="slider__container">
+          <li class="slider__container" id="slide-3">
             <div class="slider__inner">
               <picture>
                 <img  class="slider__image slider__image--3" width="526" height="334" src="img/slider-3.png" srcset="img/slider-3@2x.png 2x, img/slider-3@3x.png 3x" alt="Квадрокоптер">
