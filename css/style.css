@@ -1137,7 +1137,7 @@ a {
 .services__description {
   margin: 0;
   padding: 0;
-  font-family: Open Sans;
+  font-family: var(--basic-font);
   font-style: normal;
   font-weight: 300;
   font-size: 15px;
@@ -1741,6 +1741,7 @@ a {
 
   width: 20px;
   height: 20px;
+  padding: 0;
 
   background-color: var(--special-grey-toggle);
   border-width: 8px;
