@@ -200,19 +200,19 @@
         </ul>
         <!-- Слайды -->
         <ul class="services__list">
-          <li class="services__container services__container--current">
+          <li class="services__container services__container--current" id="service-1">
             <h3 class="services__title">Доставка</h3>
             <p class="services__description">Мы с удовольствием доставим ваш товар прямо к вашему
               подъезду совершенно бесплатно! Ведь мы неплохо<br>
               заработаем, поднимая его на ваш этаж.</p>
           </li>
-          <li class="services__container">
+          <li class="services__container" id="service-2">
             <h3 class="services__title">Гарантия</h3>
             <p class="services__description services__description--waranty">Если из-за возгорания купленного у нас товара у вас сгорит дом —
               не переживайте, мы выдадим вам новый.<br>
               Товар, не дом, конечно же.</p>
           </li>
-          <li class="services__container">
+          <li class="services__container" id="service-3">
             <h3 class="services__title">Кредит</h3>
             <p class="services__description">Залезть в долговую яму стало проще! Кредитные консультанты
               подберут для вас наиболее выгодные<br>
@@ -339,12 +339,12 @@
     <section class="page__modal modal-map">
       <h2 class="visually-hidden">Как до нас добраться</h2>
       <iframe class="modal-map__iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2249.1125488779976!2d37.52742931582563!3d55.68703098053581!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54cf65f5c8955%3A0x694710ccd55501e!2z0YPQuy4g0KHRgtGA0L7QuNGC0LXQu9C10LksIDE1LCDQnNC-0YHQutCy0LAsIDExOTMxMQ!5e0!3m2!1sru!2sru!4v1590389292816!5m2!1sru!2sru" width="960" height="560" allowfullscreen aria-hidden="false" tabindex="0" title="Адрес офиса - г.Москва улица Строителей дом 15"></iframe>
-      <button class="modal__button" type="button" aria-label="Закрыть карту"></button>
+      <button class="modal__button modal-map__close" type="button" aria-label="Закрыть карту"></button>
     </section>
     <!-- Write us Popup -->
     <section class="page__modal writeus">
       <h2 class="visually-hidden">Напишите нам</h2>
-      <form class="writeus__form" action="#" method="POST">
+      <form class="writeus__form" action="https://echo.htmlacademy.ru" method="POST">
         <p class="writeus__container">
           <label class="writeus__label" for="person">Ваше имя:</label>
           <input class="writeus__input" type="text" name="person" id="person" placeholder="Имя Фамилия" pattern="[a-zA-Zа-яА-ЯёЁ ]+">
@@ -359,7 +359,8 @@
         </p>
         <button class="button writeus__button" type="submit">Отправить</button>
       </form>
-      <button class="modal__button" type="button" aria-label="Закрыть окно обратной связи"></button>
+      <button class="modal__button writeus__close" type="button" aria-label="Закрыть окно обратной связи"></button>
     </section>
+    <script src="js/script.js" async></script>
   </body>
 </html>

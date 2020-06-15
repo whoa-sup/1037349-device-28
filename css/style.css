@@ -1563,36 +1563,28 @@ a {
 }
 /* Filter */
 
-.filter__background {
+.filter {
   position: relative;
 
-  grid-column: 1/-1;
-  grid-row: 4/-1;
-  z-index: -1;
-}
-
-.filter__background:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 50%;
-  z-index: -1;
-
-  width: 100vw;
-  min-width: 1200px;
-  height: 100%;
-
-  background-image: linear-gradient(to right, var(--basic-grey-light) 20%, var(--basic-white) 20%);
-  transform: translateX(-50%);
-}
-
-.filter {
   min-width: 328px;
   padding-top: 25px;
   padding-right: 68px;
   padding-left: 60px;
 
   background-image: linear-gradient(to bottom, var(--special-grey) 70px, var(--basic-grey-light) 70px);
+}
+
+.filter::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -2;
+
+  width: 100vw;
+  height: 100%;
+
+  background-color: var(--basic-grey-light);
 }
 
 .filter__title {
@@ -1843,6 +1835,7 @@ a {
   margin-bottom: 41px;
   padding-top: 70px;
   padding-left: 72px;
+  background-color: var(--basic-white);
 }
 
 .goods__list {
@@ -2190,4 +2183,59 @@ a {
 
 .modal--show {
   display: block;
+  animation:  0.7s showup ease-in;
+}
+
+.modal--error {
+  animation: shake 0.6s;
+}
+
+/* Keyfraymes */
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(-50%) translateY(-50%);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-52%) translateY(-50%);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(-48%) translateY(-50%);
+  }
+}
+
+@keyframes showup {
+  0% {
+    left: 100%;
+
+    transform: translateX(10%) translateY(-50%);
+  }
+
+  60%,80% {
+    left: 48%;
+
+    transform: translateX(-50%) translateY(-50%);
+  }
+
+  70%,90% {
+    left: 52%;
+
+    transform: translateX(-50%) translateY(-50%);
+  }
+
+  100% {
+    left: 50%;
+
+    transform: translateX(-50%) translateY(-50%);
+  }
 }
