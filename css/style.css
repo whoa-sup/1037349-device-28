@@ -134,6 +134,7 @@ a {
 
   background-color: var(--basic-white);
 
+  grid-template-rows: -webkit-min-content 1fr -webkit-min-content;
   grid-template-rows: min-content 1fr min-content;
 }
 
@@ -398,6 +399,7 @@ a {
 
   grid-column-gap: 65px;
   grid-row-gap: 10px;
+  grid-template-columns: repeat(3, -webkit-max-content);
   grid-template-columns: repeat(3, max-content);
 }
 
@@ -776,6 +778,7 @@ a {
 
   grid-column-gap: 62px;
   grid-row-gap: 15px;
+  grid-template-columns: repeat(3, -webkit-max-content);
   grid-template-columns: repeat(3, max-content);
 }
 
@@ -1346,6 +1349,9 @@ a {
 }
 
 .catalog-main__title {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
   margin: 0;
   margin-bottom: 10px;
   padding: 0;
@@ -1364,22 +1370,34 @@ a {
 }
 
 .catalog-main__breadcrumbs {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
   grid-area: breadcrumbs;
 }
 
 .catalog-main__sorting {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
   grid-area: sorting;
 }
 
 .catalog-main__filter {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 1;
   grid-area: filter;
 }
 
 .catalog-main__goods {
+  -ms-grid-row: 4;
+  -ms-grid-column: 2;
   grid-area: goods;
 }
 
 .catalog-main__paginator {
+  -ms-grid-row: 5;
+  -ms-grid-column: 2;
   grid-area: paginator;
 }
 
@@ -1490,6 +1508,7 @@ a {
 
   background-color: var(--basic-grey-light);
 
+  grid-template-columns: -webkit-min-content 1fr auto;
   grid-template-columns: min-content 1fr auto;
 }
 
@@ -1770,6 +1789,7 @@ a {
   align-items: center;
 
   grid-column-gap: 18px;
+  grid-template-columns: repeat(2, -webkit-min-content);
   grid-template-columns: repeat(2, min-content);
 }
 
@@ -2154,6 +2174,14 @@ a {
   height: 167px;
 }
 
+.writeus__input::-webkit-input-placeholder {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.writeus__input::-moz-placeholder {
+  color: rgba(0, 0, 0, 0.4);
+}
+
 .writeus__input::placeholder {
   color: rgba(0, 0, 0, 0.4);
 }
@@ -2183,14 +2211,38 @@ a {
 
 .modal--show {
   display: block;
-  animation:  0.7s showup ease-in;
+  -webkit-animation:  0.7s showup ease-in;
+          animation:  0.7s showup ease-in;
 }
 
 .modal--error {
-  animation: shake 0.6s;
+  -webkit-animation: shake 0.6s;
+          animation: shake 0.6s;
 }
 
 /* Keyfraymes */
+
+@-webkit-keyframes shake {
+  0%,
+  100% {
+    transform: translateX(-50%) translateY(-50%);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-52%) translateY(-50%);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(-48%) translateY(-50%);
+  }
+}
 
 @keyframes shake {
   0%,
@@ -2211,6 +2263,32 @@ a {
   60%,
   80% {
     transform: translateX(-48%) translateY(-50%);
+  }
+}
+
+@-webkit-keyframes showup {
+  0% {
+    left: 100%;
+
+    transform: translateX(10%) translateY(-50%);
+  }
+
+  60%,80% {
+    left: 48%;
+
+    transform: translateX(-50%) translateY(-50%);
+  }
+
+  70%,90% {
+    left: 52%;
+
+    transform: translateX(-50%) translateY(-50%);
+  }
+
+  100% {
+    left: 50%;
+
+    transform: translateX(-50%) translateY(-50%);
   }
 }
 
