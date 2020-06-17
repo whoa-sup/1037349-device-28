@@ -658,6 +658,8 @@ a {
 }
 
 .page-footer__academy-logo {
+  position: relative;
+  overflow: hidden;
   padding-top: 20px;
 
   grid-column: 3/4;
