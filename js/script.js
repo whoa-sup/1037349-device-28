@@ -171,6 +171,8 @@ window.addEventListener("keydown", function (evt) {
 writeusForm.addEventListener("submit", (evt) => {
   if (!writeusVisitorName.value || !writeusVisitorEmail.value || !writeusVisitorMessage.value) {
     evt.preventDefault();
+    writeusModal.classList.remove("modal--error");
+    void writeusModal.offsetWidth;
     writeusModal.classList.add("modal--error");
   } else {
     if (isStorageSupport) {
